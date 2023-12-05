@@ -2,7 +2,7 @@
 Repositorio de la materia proyecto informatico
 
 ## INTEGRANTES GRUPO 12: 
-- PISCIOLA, FEDERICO
+- PISCIOLARI CHAUVIE, FEDERICO
 - SAIZ, MARCELO
 - SANTI, ANTONELLA
 
