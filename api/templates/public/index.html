@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Informatico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_responsive.css')}}">
+</head>
+
+<body>
+    <header>
+        <h1>SISTEMA DE FACTURACION Y GESTION ONLINE </h1>
+    </header>
+
+    <main>
+        <form>
+            <!-- Etiqueta -->
+            <div>
+                <label for="in-username"> Usuario: </label>
+                <!-- Ingreso Datos -->
+                <input type="text" id="in-username" required>
+            </div>
+            <!-- Etiqueta -->
+            <div>
+                <label for="in-password"> Contraseña: </label>
+                <!-- Ingreso Datos -->
+                <input type="password" id="in-password" required>
+            </div>
+            <div>
+                <!-- Boton de Ejecucion -->
+                <input type="button" onclick="iniciarSesion()" value="Iniciar Sesion">
+            </div>
+            <span id="message"> ✓ </span>
+        </form>
+
+        <div class="CrearCuenta">
+            <!-- <button onclick="openModal_crear_usuario()"> Crear Cuenta Usuario </button> -->
+            <a onclick="openModalCrearUsuario()">CREAR CUENTA</a>
+        </div>
+
+        <!-- MODAL CREAR CUENTA DE USUARIO -->
+        <div id="myModal_crear_usuario" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="">&times;</span>
+                <h3>FORMULARIO: DATOS NUEVO USUARIO:</h3>
+                <p>Controle que los datos sean correctos antes de realizar cualquier modificacion y editarlos.</p>
+                <label for="cuil_cuit_crear_usuario">Cuil_Cuit:</label>
+                <input type="text" id="cuil_cuit_crear_usuario" onkeyup="" placeholder="cuil_cuit" required maxlength="11"
+                    minlength="11">
+                <span id="cuil_cuit_crear_usuario_validacion" class="error"></span>
+
+                <label for="username_crear_usuario">Username:</label>
+                <input type="text" id="username_crear_usuario" onkeyup="" placeholder="username">
+                <span id="nombre_usuario_crear_usuario_validacion" class="error"></span>
+
+                <label for="password_crear_usuario">Password:</label>
+                <input type="password" id="password_crear_usuario" onkeyup="" placeholder="password">
+                <span id="contrasenia_crear_usuario_validacion" class="error"></span>
+
+                <label for="name_crear_usuario">Name:</label>
+                <input type="text" id="name_crear_usuario" onkeyup="" placeholder="name">
+                <span id="nombre_crear_usuario_validacion" class="error"></span>
+
+                <label for="address_crear_usuario">address:</label>
+                <input type="text" id="address_crear_usuario" onkeyup="" placeholder="address">
+                <span id="direccion_crear_usuario_validacion" class="error"></span>
+
+                <label for="email_crear_usuario">Email:</label>
+                <input type="text" id="email_crear_usuario" onkeyup="" placeholder="email">
+                <span id="email_crear_usuario_validacion" class="error"></span>
+
+                <label for="phone_number_crear_usuario">Phone Number:</label>
+                <input type="text" id="phone_number_crear_usuario" onkeyup="" placeholder="phone_number">
+                <span id="telefono_crear_usuario_validacion" class="error"></span>
+
+
+                <button onclick="closeModalCrearUsuario()"> Salir </button>
+                <button id="guardarCambios_crear_usuario" onclick="comprobarCrearUsuario()"> Crear Usuario </button>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Proyecto Informático - T.U. Tecnologías de la Programación (UPSO)</p>
+        <p>Santi - Pisciolari Chauvié - Saiz</p>
+    </footer>
+</body>
+
+<!-- Conectamos el script0001.js con el HTML -->
+<script src="{{ url_for('static', filename='inicioSesion.js')}}"></script>
+
+<script src="{{ url_for('static', filename='usuario.js')}}"></script>
+
+</html>
